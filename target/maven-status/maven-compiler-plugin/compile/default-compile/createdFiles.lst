@@ -1,0 +1,7 @@
+com\example\dimdim\controller\MovimentacaoController.class
+com\example\dimdim\controller\ClienteController.class
+com\example\dimdim\model\Cliente.class
+com\example\dimdim\repository\ClienteRepository.class
+com\example\dimdim\model\MovimentacaoFinanceira.class
+com\example\dimdim\repository\MovimentacaoRepository.class
+com\example\dimdim\DimdimApplication.class

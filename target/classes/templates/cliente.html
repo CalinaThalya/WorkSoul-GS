@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Lista de trabalhadores que são do projeto Fenix - Work Soul</title>
+<link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+        <a href="/movimentacao/nova"> Oi, vamos adcionar sua movimentação financeira e garatir o furuto do seu trabalho?</a>
+
+<h1>Trabalhadores que são clientes cadastrados no projeto Fenix - Work Soul</h1>
+
+<h2>Um pouco sobre o projeto:</h2>
+
+<h3>
+  O Fenix WorkSoul é um sistema web que ajuda profissionais autônomos e profissionais de baixa renda a gerenciar suas <br><br>
+  movimentações financeiras e planejar o futuro no mercado de trabalho. Utiliza as tabelas cliente e movimentacao financeira <br><br>
+  para registrar dados de usuários e suas transações diárias.A aplicação promove educação financeira, estabilidade e inclusão,<br><br>
+  apoiando a requalificação profissional diante das mudanças do trabalho moderno.Futuramente terá integração IA generativa cosultores <br><br>
+  financeiros, que irão fazer análises e relatórios simples sobre hábitos financeiros. O projeto terá como objetivo expandir funcionalidades <br><br>
+  e alcançar mais usuários,contribuindo para um futuro financeiro mais seguro e inclusivo. Com a ajuda de IA e cosultores financeiros,o  <br><br>
+  Fenix WorkSoul visa ser uma ferramenta essencial para o sucesso financeiro de profissionais em todo o mundo. <br><br>
+  Está alinhado aos ODS 4, 8 e 10, incentivando trabalho decente, crescimento econômico e redução das desigualdades.
+</h3>
+
+    <a href="/cliente/novo">
+<button>➕ Adicionar Fucionarios que são nossos clientes?</button>
+</a>
+ 
+    <table border="1">
+<tr>
+<th>ID</th>
+<th>Nome</th>
+<th>CPF</th>
+<th>Ações</th>
+</tr>
+<tr th:each="cliente : ${cliente}">
+<td th:text="${cliente.id}"></td>
+<td th:text="${cliente.nome}"></td>
+<td th:text="${cliente.cpf}"></td>
+<td>
+<a th:href="@{|/cliente/editar/${cliente.id}|}">
+<button>✏️ Editar</button>
+</a>
+<a th:href="@{|/cliente/deletar/${cliente.id}|}" 
+
+                   onclick="return confirm('Tem certeza que deseja excluir?')">
+<button>🗑️ Excluir</button>
+</a>
+</td>
+</tr>
+</table>
+</body>
+</html>
+
+ 
